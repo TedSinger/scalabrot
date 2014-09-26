@@ -30,7 +30,7 @@ object Mandelbrot extends SimpleSwingApplication {
     def write(v: SquareView) {
         val img = new BufferedImage(resolution, resolution, BufferedImage.TYPE_INT_RGB)
         val h = img.createGraphics()
-        val f = new FileOutputStream("/home/ted/Desktop/saved.png")
+        val f = new FileOutputStream("saved.png")
         v.paint(h)
         ImageIO.write(img, "png", f)
         f.close()
